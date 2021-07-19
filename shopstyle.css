@@ -1,0 +1,81 @@
+ul {
+	/* 取消ul預設的內縮及樣式 */
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	}
+		
+ul.drop-down-menu-top {
+	border: #b8b0b0 3px solid;
+	display: inline-block;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 25px;
+}
+
+ul.drop-down-menu-top li {
+    position: relative;
+	white-space: nowrap;
+	border-right: #b8b0b0 3px solid;
+}
+
+ul.drop-down-menu-top>li:last-child {
+	border-right: none;
+}
+
+ul.drop-down-menu-top>li {
+	float: left;
+	/* 只有第一層是靠左對齊*/
+}
+
+ul.drop-down-menu-top a {
+	background-color: #fff;
+    color: #E3916E;
+	display: block;
+	padding: 0 20px;
+	text-decoration: none;
+	line-height: 40px;
+}
+
+ul.drop-down-menu-top a:hover {
+	/* 滑鼠滑入按鈕變色*/
+	background-color: #D7C4BB;
+	color: #fff;
+}
+
+ul.drop-down-menu-top li:hover>a {
+	/* 滑鼠移入次選單上層按鈕保持變色*/
+	background-color: #D7C4BB;
+	color: #fff;
+}
+
+ul.drop-down-menu-top ul {
+	border: #b8b0b0 3px solid;
+	position: absolute;
+	z-index: 99;
+	left: -1px;
+	top: 100%;
+	min-width: 180px;
+}
+
+ul.drop-down-menu-top ul li {
+	border-bottom: #b8b0b0 3px solid;
+}
+
+ul.drop-down-menu-top ul li:last-child {
+	border-bottom: none;
+}
+
+ul.drop-down-menu-top ul {
+	/*隱藏次選單*/
+	display: none;
+}
+
+ul.drop-down-menu-top li:hover>ul {
+	/* 滑鼠滑入展開次選單*/
+	display: block;
+}
+
+.top-message{
+	width:100%;
+	font-size:30px;
+}
